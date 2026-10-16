@@ -254,7 +254,13 @@ function createTestApp() {
       <html><head><title>Images Page</title></head>
       <body>
         <h1>Images</h1>
-        <img alt="Sample" src="data:image/png;base64,${samplePngBase64}" />
+        <img alt="Hidden duplicate" style="display:none" src="/bare-image?hidden" />
+        <img alt="" width="1" height="1" src="/bare-image?tracking-pixel" />
+        <img alt="" width="16" height="16" src="/bare-image?icon" />
+        <main>
+          <img alt="Sample" width="320" height="180"
+               src="data:image/png;base64,${samplePngBase64}" />
+        </main>
       </body></html>
     `);
   });

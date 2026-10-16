@@ -22,7 +22,7 @@ describe('Downloads and Images', () => {
 
       expect(result.images).toBeDefined();
       expect(Array.isArray(result.images)).toBe(true);
-      expect(result.images.length).toBeGreaterThan(0);
+      expect(result.images).toHaveLength(1);
 
       const first = result.images[0];
       expect(first.src).toMatch(/^data:image\/png;base64,/);
